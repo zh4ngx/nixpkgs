@@ -24,8 +24,8 @@ buildPythonApplication rec {
   src = fetchFromGitHub {
     owner = "zh4ngx";
     repo = "apio";
-    rev = "copy-udev";
-    hash = "sha256-VU4tOszGkw20DWW2SerFsnjFiSkrSwqBcwosGnHJfU8=";
+    rev = "2dc01830609ad2ae43d085200f489f82db3f144c";
+    # hash = "sha256-VU4tOszGkw20DWW2SerFsnjFiSkrSwqBcwosGnHJfU8=";
   };
 
   postPatch = ''
