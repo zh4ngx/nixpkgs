@@ -17,14 +17,14 @@
 
 buildPythonApplication rec {
   pname = "apio";
-  version = "develop";
+  version = "copy-udev";
 
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "zh4ngx";
     repo = "apio";
-    rev = "develop";
+    rev = "copy-udev";
     hash = "sha256-VU4tOszGkw20DWW2SerFsnjFiSkrSwqBcwosGnHJfU8=";
   };
 
