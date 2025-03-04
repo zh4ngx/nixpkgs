@@ -29,10 +29,6 @@ buildPythonApplication rec {
   };
 
   postPatch = ''
-    substituteInPlace pyproject.toml \
-      --replace-fail 'scons==4.2.0' 'scons' \
-      --replace-fail '==' '>='
-
     substituteInPlace apio/managers/scons.py --replace-fail \
       'return "tinyprog --libusb --program"' \
       'return "${tinyprog}/bin/tinyprog --libusb --program"'
