@@ -33,12 +33,6 @@ buildPythonApplication rec {
       --replace-fail 'scons==4.2.0' 'scons' \
       --replace-fail '==' '>='
 
-    mkdir -p lib/udev/rules.d
-
-    ln apio/resources/80-fpga-ftdi.rules lib/udev/rules.d/70-fpga-ftdi.rules
-    
-    ln apio/resources/80-fpga-serial.rules lib/udev/rules.d/70-fpga-serial.rules
-
     substituteInPlace apio/managers/scons.py --replace-fail \
       'return "tinyprog --libusb --program"' \
       'return "${tinyprog}/bin/tinyprog --libusb --program"'
