@@ -17,14 +17,14 @@
 
 buildPythonApplication rec {
   pname = "apio";
-  version = "0.9.5";
+  # version = "0.9.5";
 
   pyproject = true;
 
   src = fetchFromGitHub {
-    owner = "FPGAwars";
+    owner = "zh4ngx";
     repo = "apio";
-    rev = "v${version}";
+    rev = "develop";
     hash = "sha256-VU4tOszGkw20DWW2SerFsnjFiSkrSwqBcwosGnHJfU8=";
   };
 
