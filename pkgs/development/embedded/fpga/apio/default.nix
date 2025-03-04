@@ -25,7 +25,7 @@ buildPythonApplication rec {
     owner = "zh4ngx";
     repo = "apio";
     rev = "2dc01830609ad2ae43d085200f489f82db3f144c";
-    # hash = "sha256-VU4tOszGkw20DWW2SerFsnjFiSkrSwqBcwosGnHJfU8=";
+    hash = "sha256-usX++B1gaQ/QP1/2sv7UelhxOoCJLT33UFKCzDm+Rpw=";
   };
 
   postPatch = ''
