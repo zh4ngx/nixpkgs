@@ -29,6 +29,10 @@ buildPythonApplication rec {
   };
 
   postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail 'scons==4.2.0' 'scons' \
+      --replace-fail '==' '>='
+
     mkdir -p lib/udev/rules.d
 
     ln apio/resources/80-fpga-ftdi.rules lib/udev/rules.d/70-fpga-ftdi.rules
