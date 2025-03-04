@@ -29,13 +29,6 @@ buildPythonApplication rec {
   };
 
   postPatch = ''
-    substituteInPlace apio/managers/scons.py --replace-fail \
-      'return "tinyprog --libusb --program"' \
-      'return "${tinyprog}/bin/tinyprog --libusb --program"'
-    substituteInPlace apio/util.py --replace-fail \
-      '_command = apio_bin_dir / "tinyprog"' \
-      '_command = "${tinyprog}/bin/tinyprog"'
-
     # semantic-version seems to not support version numbers like the one of tinyprog in Nixpkgs (1.0.24.dev114+gxxxxxxx).
     # See https://github.com/rbarrois/python-semanticversion/issues/47.
     # This leads to an error like "Error: Invalid version string: '1.0.24.dev114+g97f6353'"
